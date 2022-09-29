@@ -36,6 +36,15 @@ public class EmployeeWageComputation {
 
         System.out.println(); // for empty space
 
+        System.out.println(); // for empty space
+
+        TotalEmpWage uc6 = new TotalEmpWage();
+        double totalWageFT = uc6.getTotalWage(180, 20);
+        System.out.println("FULL TIME emplyoee Total wage is " + totalWageFT + " Rs");
+
+        double totalWagePT = uc6.getTotalWage(100, 21);
+        System.out.println("FULL TIME emplyoee Total wage is " + totalWagePT + " Rs");
+
     }
 
     //check attendanc
@@ -70,5 +79,21 @@ public class EmployeeWageComputation {
 
     }
 
+
+    //calculate total wage
+    public static class TotalEmpWage extends EmployeeWageComputation {
+        int Min_HRS_IN_MONTH = 100;
+        int NUM_OF_WORKING_DAYS = 20;
+
+        public double getTotalWage(int totalEmpHr, int totalWorkingDay) {
+            if (totalEmpHr >= Min_HRS_IN_MONTH && totalWorkingDay >= NUM_OF_WORKING_DAYS) {
+                totalWage = totalEmpHr * perHourWage;
+            } else {
+                System.out.println("Working Hours are not completed yet");
+            }
+            return totalWage;
+        }
+
+    }
 }
 
