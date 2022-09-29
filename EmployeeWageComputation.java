@@ -26,6 +26,16 @@ public class EmployeeWageComputation {
 
         System.out.println(); // for empty space
 
+        //Monthly wage
+        EmpMonthlyWage uc5 = new EmpMonthlyWage();
+        double monthWageFT = uc5.getEmpMonthWage(dailyWageFT, 20);
+        System.out.println("FULL TIME emplyoee Monthly wage is " + monthWageFT + " Rs");
+
+        double monthWagePT = uc5.getEmpMonthWage(dailyWagePT, 20);
+        System.out.println("PART TIME emplyoee Monthly wage is " + monthWagePT + " Rs");
+
+        System.out.println(); // for empty space
+
     }
 
     //check attendanc
@@ -49,6 +59,15 @@ public class EmployeeWageComputation {
         public double getEmpDailyWage(int FullDayHR) {
             return perHourWage * FullDayHR;
         }
+    }
+
+
+    //calculate monthly vage
+    public static class EmpMonthlyWage {
+        public double getEmpMonthWage(double perDayWage, int workingDay) {
+            return perDayWage * workingDay;
+        }
+
     }
 
 }
