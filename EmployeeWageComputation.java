@@ -9,11 +9,11 @@ public class EmployeeWageComputation {
     public static double totalWage;
 
     public static void main(String[] args) {
-        //checking attendence full time or parttime
+        //checking attendence full time or part-time
         Attendance uc1 = new Attendance();
         uc1.checkAttendance();
 
-        System.out.println();
+        System.out.println();//empty space
 
 
         //daily wage
@@ -37,6 +37,8 @@ public class EmployeeWageComputation {
         System.out.println(); // for empty space
 
         System.out.println(); // for empty space
+        //
+        //calculate total emp wage
 
         TotalEmpWage uc6 = new TotalEmpWage();
         double totalWageFT = uc6.getTotalWage(180, 20);
